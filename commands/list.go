@@ -38,7 +38,13 @@ func (cmd *List) Parse(fields []interface{}) error {
 	}
 
 	dec := utf7.Encoding.NewDecoder()
-
+	
+	s := make([]string, len(fields))
+	
+	for i, v := range fields {
+		s[i] = fmt.Sprint(v)
+	}
+	
 	if mailbox, err := imap.ParseString(fields[0]); err != nil {
 		return err
 	} else if mailbox, err := dec.String(mailbox); err != nil {
