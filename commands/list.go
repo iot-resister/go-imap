@@ -5,6 +5,7 @@ import (
 
 	"github.com/emersion/go-imap"
 	"github.com/emersion/go-imap/utf7"
+	"fmt"
 )
 
 // List is a LIST command, as defined in RFC 3501 section 6.3.8. If Subscribed
