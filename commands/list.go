@@ -46,7 +46,7 @@ func (cmd *List) Parse(fields []interface{}) error {
 		s[i] = fmt.Sprint(v)
 	}
 	
-	if mailbox, err := imap.ParseString(fields[0]); err != nil {
+	   if mailbox, err := imap.ParseString(s[0]); err != nil 
 		return err
 	} else if mailbox, err := dec.String(mailbox); err != nil {
 		return err
